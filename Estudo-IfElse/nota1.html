@@ -1,0 +1,67 @@
+<script>
+    /*Programa - Composição de Nota
+A disciplina de Programação do Curso Técnico Integrado de Informática para Internet do IFC do
+campus Araquari é lecionada utilizando a linguagem de Programação Javascript.
+Esta disciplina possui avaliação trimestral, para que o critério de avaliação dos alunos não seja de
+uma única forma (único princípio didático), o Professor Fábio criou critérios para composição da
+nota trimestral. Assim, a nota trimestral da disciplina de programação é composta pelas seguintes
+atividades e pesos, totalizando 10 pontos:
+- Prova: 50%
+- Listas: 30%
+- Mimo: 10%
+- Matemática Básica: 10%
+Elabore um programa que solicite a nota do aluno(a) e calcule qual foi a sua nota em cada
+elemento que compõe a nota trimestral, e apresente na tela a composição e nota total alcançada.
+Com bases na nota calculada emitira as seguintes mensagens:
+- Se o aluno(a) alcançar nota superior ou igual a 6,00 escreve aprovado !!!”.
+- Se o aluno(a) alcançar nota menor que 6,00 e maior que 4,00 escrever “Você está de
+recuperação !!!”..
+- Se o aluno(a) alcançar nota menor ou igual a 4,00 escrever “Você está reprovado !!!”*/
+
+
+    const nota = Number(prompt("Informe a sua nota do Trimestre: "));
+
+    const notaProva = nota * 5 / 10;
+    const notaLista = nota * 3 / 10;
+    const notaMimo = nota * 1 / 10;
+    const notaMatematica = nota * 1 / 10;
+
+    alert(`Sua nota da prova é: ${notaProva}.`);
+
+    alert(`Sua nota das Listas de exercícios é ${notaLista}.`);
+
+    alert(`Sua nota do Mimo é: ${notaMimo}.`);
+    
+    alert(`Sua nota de matemática básica é: ${notaMatematica}.`);
+
+    if (nota >= 6) {
+
+        alert(`Você foi aprovado!!!`);
+
+    } else if (nota <= 4) {
+
+        alert(`Você está reprovado!!!`);
+
+    } else {
+
+        alert(`Você está de recuperação!!!`);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</script>

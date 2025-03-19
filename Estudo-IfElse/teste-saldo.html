@@ -1,0 +1,17 @@
+<script>
+
+let saldo =Number(prompt("informe o seu valor de saldo:"));
+
+const valorSaque =Number(prompt("Informe o valor que deseja sacar: "));
+
+if (saldo < valorSaque) {
+
+    alert("Saldo insuficiente!");
+
+} else { 
+    saldo = valorSaque;
+    alert(`Seu saldo foi realizado com sucesso, agora seu saldo é: R$ ${saldo}`);
+
+}
+
+</script>

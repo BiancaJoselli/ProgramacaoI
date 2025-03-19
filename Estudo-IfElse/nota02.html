@@ -1,0 +1,52 @@
+<script>
+
+/*Programa - Composição de Nota
+A disciplina de Programação do Curso Técnico Integrado de Informática para Internet do IFC do
+campus Araquari é lecionada utilizando a linguagem de Programação Javascript.
+Esta disciplina possui avaliação trimestral, para que o critério de avaliação dos alunos não seja de
+uma única forma (único princípio didático), o Professor Fábio criou critérios para composição da
+nota trimestral. Assim, a nota trimestral da disciplina de programação é composta pelas seguintes
+atividades e pesos, totalizando 10 pontos:
+- Prova: 50%
+- Listas: 30%
+- Mimo: 10%
+- Matemática Básica: 10%
+Elabore um programa que solicite a nota do aluno(a) para cada item que compõe a nota
+trimestral e calcule qual foi a sua nota do trimestre (média ponderada) , e apresente na tela a
+composição da nota e nota total alcançada.
+Com bases na nota calculada emitira as seguintes mensagens:
+- Se o aluno(a) alcançar nota superior ou igual a 6,00 escrever “Parabéns você está
+aprovado !!!”.
+- Se o aluno(a) alcançar nota menor que 6,00 e maior que 4,00 escrever “Você está de
+recuperação !!!”..
+- Se o aluno(a) alcançar nota menor ou igual a 4,00 escrever “Você está reprovado !!!”*/
+
+    const notaProva = Number(prompt("Informe sua nota da prova: "));
+    const notaLista = Number(prompt("Informe sua nota das listas de exercícios: "));
+    const notaMimo = Number(prompt("Informe sua nota do Mimo: "));
+    const notaMatematica = Number(prompt("Informe sua nota da matamática básica: "));
+
+    const peso1 = notaProva * 0.5;
+    const peso2 = notaLista * 0.3;
+    const peso3 = notaMimo * 0.1;
+    const peso4 = notaMatematica * 0.1;
+    const somaNota = peso1 + peso2 + peso3 + peso4;
+
+    alert(`Sua média é: ${somaNota.toFixed(2).replace(".",",")}`);
+
+    if (somaNota >= 6) {
+
+        alert(`Você foi aprovado!!!`);
+
+    } else if (somaNota <= 4) {
+
+        alert(`Você está reprovado!!!`);
+
+    } else {
+
+        alert(`Você está de recuperação!!!`);
+    }
+
+
+
+</script>

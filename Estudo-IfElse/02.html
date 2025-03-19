@@ -1,0 +1,40 @@
+<html lang="pt-br">
+
+<script>
+
+    const codigo = Number(prompt("Informe o número seu código:"));
+    const anoNascimento = Number(prompt("Informe o ano do seu nascimento"));
+    const anoIngresso = Number(prompt("Informe o ano do seu ingresso na empresa"));
+    const anoAtual = Number(prompt("Informe o ano atual"));
+
+
+
+    let anosTrabalhados = (anoAtual - anoIngresso);
+    let idade = (anoAtual - anoNascimento);
+
+    if (idade >= 65 || anosTrabalhados >= 30 || idade >= 60 && anosTrabalhados >= 25) {
+
+        document.write(`
+        <ul>
+           <li>Código: ${codigo}</li> 
+            <li>idade: ${idade}</li>
+            <li>Anos de trabalho: ${anosTrabalhados}</li>
+            <li><strong>Requerer aposentadoria!</strong></li> 
+        </ul>
+        `);
+        
+
+    } else {
+
+        document.write(`
+        <ul>
+           <li>Código: ${codigo}</li> 
+            <li>idade: ${idade}</li>
+            <li>Anos de trabalho: ${anosTrabalhados}</li>
+            <li><strong>Não requerer aposentadoria!</strong></li> 
+        </ul>
+        `);
+    }
+
+
+</script>

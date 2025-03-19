@@ -1,0 +1,30 @@
+<script>
+
+    const nota1 = Number(prompt("Informe sua primeira nota: "));
+    const nota2 = Number(prompt("Informe sua segunda nota: "));
+    const nota3 = Number(prompt("Informe sua terceira nota: "));
+    const mediaExercicios = Number(prompt("Informe sua média dos exercícios: "));
+
+
+    let mediaAproveitamento = (nota1 + (nota2 * 2) + (nota3 * 3) + mediaExercicios) / 7;
+
+    if (mediaAproveitamento >= 9.0) {
+
+        alert(`A`);
+
+    } else if (mediaAproveitamento >= 7.5 && mediaAproveitamento < 9.0) {
+
+        alert(`B`);
+
+    } else if (mediaAproveitamento >= 6.0 && mediaAproveitamento < 7.5) {
+
+        alert(`C`);
+
+    } else {
+
+        alert(`D`);
+
+    }
+
+
+</script>
