@@ -1,0 +1,85 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: ESTAÇÃO DO ANO
+    Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
+    De acordo com as respostas, informe qual a estação do ano correspondente.
+    */
+
+    //ENTRADA
+
+    const hemisferio = prompt("Informe o hemisfério que você está: Norte ou Sul").toLowerCase() ;
+    const mesAtual = Number(prompt("Informe o mês que você está: 1; 2; 3..."));
+
+    //SAÍDA
+
+    switch (hemisferio) {
+        case "norte":
+            switch (mesAtual) {
+                case 1:
+                case 2:
+                case 3:
+                    alert(`Inverno`);
+                    break;
+
+                case 4:
+                case 5:
+                case 6:
+                    alert(`primavera`);
+                    break;
+
+                case 7:
+                case 8:
+                case 9:
+                    alert(`Verão`);
+                    break;
+
+                case 10:
+                case 11:
+                case 12:
+                    alert(`Outono`);
+                    break;
+
+                default:
+                    alert(`Inválido`);
+                    break;
+            }
+            break;
+        case "sul":
+            switch (mesAtual) {
+                case 1:
+                case 2:
+                case 3:
+                    alert(`Verão`);
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    alert(`Outono`);
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    alert(`Inverno`);
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    alert(`Primavera`);
+                    break;
+
+                default:
+                    alert(`Inválido`);
+                    break;
+            }
+            break;
+            default:
+                alert(`Hemisfério inválido`);
+                break;
+    }
+
+
+
+
+
+</script>
