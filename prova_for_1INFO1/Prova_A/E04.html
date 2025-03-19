@@ -1,0 +1,60 @@
+<script>
+    //Problema: Imprimir padrão numérico crescente e decrescente
+    /*
+    Peça para o usuário informar um número inteiro positivo N.
+    Imprima um padrão numérico crescente e decrescente, conforme o exemplo abaixo.
+    Exemplo:
+    Entrada: 4
+    Saída:
+    1
+    12
+    123
+    1234
+    123
+    12
+    1
+    */
+    //AQUI, USE FOR COM VARIÁVEL DE CONTROLE!!!
+
+    //Entrada
+
+    const numeroInteiro = Number(prompt("Informe um número inteiro: "));
+    let lista1 = [];
+
+
+
+    //Processamento
+
+    for (let contador = 1; contador <= numeroInteiro; contador++) {
+
+        lista1.push(contador);
+
+        lista1.sort((a, b) => a - b);
+
+
+    }
+
+
+    //Saída
+
+    document.write(`Ordem crescente e decrescente: <br> ${lista1.join("<br>")} <br> ${lista1.reverse().join("<br>")}`);
+
+
+
+
+
+    /*const numeroInteiro = Number(prompt("Informe um número inteiro: "));
+    let lista1 = [];
+
+
+
+        for (let contador = 1; contador < numeroInteiro.length; contador++) {
+        const numero = numeroInteiro[contador].toLowerCase();
+        if (lista1.includes(numero) == false) {
+            lista1.push(numero);
+            lista1.sort((a, b) => a - b);
+
+        }
+    }*/
+
+</script>
