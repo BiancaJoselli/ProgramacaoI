@@ -1,0 +1,37 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: REMOVER SUV
+    Crie o seguinte array:
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    Pergunte ao usuário qual carro deseja REMOVER da lista.
+    Apresente a lista antiga de SUVs e a C, após a remoção do veículo solicitado.
+    */
+
+    //ENTRADA
+
+    let listaSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+
+    let carroRemover = prompt("Qual carro você deseja remover da lista?\n" + listaSUV.join(", ")); // join está convertendo o array para uma string
+
+    //PROCESSAMENTO
+
+    let listaAtualizada = [...listaSUV]; // Os três pontinhos (...) fazem uma cópia independente do array original (listaSUV).
+
+    let carroRemovido = listaAtualizada.indexOf(carroRemover); //Retorna o índice.
+
+    if (carroRemovido >= 0) {
+        listaAtualizada.splice(carroRemovido, 1); //Adiciona, remove ou substitui elementos em posições específicas do array.
+
+        document.write(`
+        Lista antiga: ${listaSUV.join(", ")} <br> 
+        Lista atualizada: ${listaAtualizada.join(", ")}`);
+
+        //join: Junta os elementos do array em uma string 
+
+    } else {
+        alert("Valor inválido!");
+    }
+
+
+</script>
