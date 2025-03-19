@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: VALIDAR DADOS DO USUÁRIO
+    Faça um programa que leia e valide as seguintes informações:
+    Nome: maior que 3 caracteres;
+    Idade: entre 0 e 150;
+    Salário: maior que zero;
+    Sexo: 'f' ou 'm';
+    Estado Civil: 's', 'c', 'v', 'd';
+    */
+
+    //ENTRADA
+    let nome, idade, salario, sexo, civil, erros = [];
+    
+    
+    //PROCESSAMENTO
+    do {
+        nome = prompt("Informe seu nome:").trim();
+        idade = Number(prompt("Informe sua idade"));
+        salario =  Number(prompt("Informe seu salário"));
+        sexo = prompt("Informe seu sexo(f - feminino; m - masculino)").toLowerCase();
+        civil = prompt("Informe seu sexo(s - solteiro; c - casado; v - viúvo; d - divorciado)");
+
+    let erros = [
+        nome.length < 3 && "Nome deve ter pelo menos 3 caracteres.",
+        (idade < 0 || idade > 150) && "Idade deve estar entre 0 e 150.",
+        salario < 0 && "Salário deve ser um número positivo.",
+        !["f", "m"].includes(sexo) && "Sexo inválido! Use 'f' ou 'm'.",
+        !["s", "c", "v", "d"].includes(civil) && "Estado civil inválido! Use 's', 'c', 'v' ou 'd'."
+    ].filter(Boolean);
+
+    if (erros.length > 0 ) {
+        alert("Erros encontrados: \n" + erros.join("\n")); 
+    }
+
+
+    } while (erros.length > 0);
+    
+    //SAÍDA
+
+    alert(`
+    Nome: ${nome};
+    Idade: ${idade};
+    Salário: ${salario};
+    Sexo: ${sexo === "f" ? "Feminino" : "Masculino"};
+    Estado Civil: ${civil === "s" ? "Solteiro" : civil === "c" ? "Casado" : civil === "v" ? "Viúvo" : "Divorciado"}`);
+
+</script>
